@@ -2,23 +2,46 @@
 <html>
 <head>
   <title>Semaab Chaudhry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
   <h1 style="background-color:#ffe6cc"> Semaab's Portfolio </h1>
-  <h2> About Me </h2>
   <h4 title="A lil about me"> Young traveler, learner, artist.</h4>
 <ul>
   <li><a href="portfolio.html">Home</a></li>
+  <li><a href="aboutme.html">About Me</a></li>
   <li><a href="volunteerwork.html">Work Experiences</a></li>
   <li><a href="projects.html">Projects</a></li>
-  <li><a href="contact.html">Contact</a></li>
   </ul>
-  <p> I'm a 17 year old rising senior at the Bronx High School of Science. I enjoy reading and listening to music in my free time. I'm also very interested in pursuing a career in computer science.
-  I grew up in the Bronx and have lived in the same building since birth.
- </p>
-  <p>I enjoy reading. One of my favorite books is The Heartbroken Heartbreaker.
-  I also really love music. My favorite artists include Liam Payne, Alex Aiono, Zayn Malik, Conor Maynard, Harry Styles, Louis Tomlinson, Niall Horan, and One Republic.
-  I like building and making crafts as well.
+  <h2 class="w3-center">Automatic Slideshow</h2>
+
+<div class="w3-content w3-section" style="max-width:500px", "max-height:400px">
+  <img class="mySlides" src="me.jpg" style="width:100%">
+  <img class="mySlides" src="coding.jpg" style="width:100%">
+  <img class="mySlides" src="library.jpg" style="width:100%">
+  <img class="mySlides" src="landscape.jpg" style="width:100%">
+  <img class="mySlides" src="travel.jpg" style="width:100%">
+  <img class="mySlides" src="music.jpg" style="width:100%">
+</div>
+
+//Add music//
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>
